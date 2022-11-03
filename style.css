@@ -1,0 +1,333 @@
+@font-face {
+    font-family: letters;
+    src: url("./fonts/letters.ttf");
+}
+@font-face {
+    font-family: Congrats;
+    src: url("./fonts/congrats.ttf");
+}
+@font-face {
+    font-family: cars;
+    src: url("./fonts/cars.ttf");
+}
+@font-face {
+    font-family: ind;
+    src: url("./fonts/IndieFlower-Regular.ttf");
+}
+.press,.press2{
+    transition: 0.1s linear transform;
+}
+.press:active{
+    transform: scale(0.95);
+}
+.press2:active{
+    transform: scale(0.99);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+body{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.loading{
+    padding: 40px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff00;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    /* display: none; */
+    transition: 0.5s linear top;
+}
+.loading h1, .loading p{
+    font-family:ind,Arial, Helvetica, sans-serif;
+}
+.loading h1{
+    font-size: 3em;
+    margin-top: -50px;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+.loading p {
+    font-size: 1.3em;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 120%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+.loading .start{
+    border: none;
+    outline: none;
+    background-color: dodgerblue;
+    font-family: ind;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding: 12px 70px;
+    margin-top: 50px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    display: none;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 40%,#FFE53B 95%);
+
+}
+
+.birthday{
+    text-align: center;
+    letter-spacing: 5px;
+    padding-top: 25px;
+    font-size: 4em;
+    font-family:letters ,Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ 
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+
+}
+
+
+
+.name{
+    text-align: center;
+    font-family:congrats, Arial, Helvetica, sans-serif;
+    font-size: 6.5em;
+    font-weight: normal;
+    margin-top: 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    
+
+}
+.preCountdown{
+    text-align: center;
+    font-family: ind, Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    margin-top: -20px;
+    padding:0 20px 30px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: radial-gradient( circle 602px at 2.1% 5.1%,  rgba(233,0,120,1) 0%, rgba(0,0,0,1) 90.1% );
+    
+}
+.countdown{
+    /* background-color: blanchedalmond; */
+    min-height: 100px;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /* background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
+    transition: 0.1s linear transform;
+}
+.countdown p{
+    font-family: ind,Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+
+    /* line-height: -100px; */
+}
+.countdown:active{
+    transform: scale(0.98);
+}
+
+.pekachu{
+    height: auto;
+    width: 100%;
+    /* background-color: yellow; */
+
+    margin: 20px 0 20px 0;
+}
+.pekachu .row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 13px;
+}
+.pekachu img{
+    width: calc(50vw - 20px);
+    border-radius: 10px;
+}
+.pekaTxt{
+    font-size: 5em;
+    font-family: cars, Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* padding: 200px 0; */
+    /* padding: 0 0 10px 0; */
+    /* padding: 5px; */
+    letter-spacing: 3px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 70%);
+    
+}
+.cake{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.cake img{
+    height: auto;
+    width: 93%;
+    border-radius: 15px;
+    
+}
+
+.quote{
+    width: 100%;
+}
+.quote p{
+    font-family: ind, Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-weight: normal; */
+    letter-spacing: 1px;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+}
+
+.noti1{
+    text-align: center;
+    color: red;
+    font-family: ind, Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+
+.bookDiv{
+    margin: 20px auto;
+    width: 250px;
+    height: 350px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform:perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0,0,0,0.5),
+                2px 2px 15px 1px #ddd;
+  /* box-shadow: 0 0 15px 0px #555; */
+
+    margin: 15px;
+    display: block;
+    margin: 50px auto;
+    border-radius: 3px;
+}
+.bookDiv:hover{
+    z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+}
+.bookDiv .book{
+   width: 100%;
+   height: auto;
+   background: red;
+   display: block;
+   margin: auto;
+ 
+}
+.bookDiv img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
+  transform-origin: left;
+  transition: 1s;
+  border-radius: 3px;
+
+}
+.bookDiv:hover .img{
+  transform: rotateY(-135deg);
+  z-index: 2000;
+}
+.bookDiv .book img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bookDiv .details{
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: -1;
+  color: #333;
+}
+.bookDiv .details p{
+    font-family: ind;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.bookDiv .details h2{
+    font-family: ind;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+.end{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.end p{
+    font-family: ind;
+    font-weight: bold;
+    font-size: 2em;
+    color: #aaa;
+}
+.end h2{
+    font-family: congrats;
+    font-weight: normal;
+    font-size: 4.5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: radial-gradient( circle 602px at 2.1% 5.1%,  rgba(233,0,120,1) 0%, rgba(0,0,0,1) 90.1% );
+
+}
